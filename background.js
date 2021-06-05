@@ -1,5 +1,4 @@
 const tabs = [];
-const instanceTranslator = null
 
 const baseURL = 'https://translate.google.com'
 
