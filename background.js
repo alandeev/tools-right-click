@@ -25,7 +25,7 @@ const openTranslator = (text, tabId) => {
   const url = `${baseURL}?sl=${languageConfig.from}&tl=${languageConfig.to}&text=${encodeURI(text)}&op=translate`
 
   tabId ?
-  ( chrome.tabs.update(tabId, { url }) ) :
+  ( chrome.tabs.update(tabId, { url, active: true }) ) :
   ( window.open(url) );
 }
 
