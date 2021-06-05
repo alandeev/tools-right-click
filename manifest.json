@@ -1,0 +1,10 @@
+{
+  "name": "Translator",
+  "description": "Translate texts specifics by right-click",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [ "contextMenus", "tabs", "activeTab" ]
+}
