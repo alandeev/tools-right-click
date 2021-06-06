@@ -1,10 +1,22 @@
 {
   "name": "Translator",
   "description": "Translate texts specifics by right-click",
-  "version": "1.0",
-  "manifest_version": 2,
+  "version": "2.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "*://*/*"
+  ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
-  "permissions": [ "contextMenus", "tabs", "activeTab" ]
+  "action": {
+    "default_title": "Click Me",
+    "default_popup": "pages/popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "window"
+  ]
 }

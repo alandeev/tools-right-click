@@ -1,0 +1,22 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "### Examples > Writing... wait!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alandev2/translator-right-click.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alandev2/translator-right-click/issues"
+  },
+  "homepage": "https://github.com/alandev2/translator-right-click#readme",
+  "dependencies": {
+    "@types/chrome": "0.0.144"
+  }
+}
