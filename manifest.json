@@ -1,6 +1,6 @@
 {
-  "name": "Translator",
-  "description": "Translate texts specifics by right-click",
+  "name": "Text Tools",
+  "description": "Tools to texts by right-click",
   "version": "2.0",
   "manifest_version": 3,
   "host_permissions": [

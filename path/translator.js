@@ -17,6 +17,18 @@ const findTabByUrlTranslator = () => {
   return tab;
 }
 
+const removeEventCallBackTranslator = (tabId) => {
+  const deletedIndex = tabs.findIndex(c => c.id === tabId);
+
+  tabs.splice(deletedIndex, 1);
+}
+
+const createEventCallbackTranslator = (tab) => {
+  tab.id && chrome.tabs.get(tab.id, (tab) => {
+    tabs.push(tab);
+  })
+}
+
 const handlerTranslator = ({ selectionText }) => {
   if(!selectionText) return;
 
@@ -28,18 +40,6 @@ const handlerTranslator = ({ selectionText }) => {
   tabId ?
   ( chrome.tabs.update(tabId, { url, active: true }) ) :
   (   chrome.tabs.create({ url, active: true }) )
-}
-
-const removeEventCallBackTranslator = (tabId) => {
-  const deletedIndex = tabs.findIndex(c => c.id === tabId);
-
-  tabs.splice(deletedIndex, 1);
-}
-
-const createEventCallbackTranslator = (tab) => {
-  tab.id && chrome.tabs.get(tab.id, (tab) => {
-    tabs.push(tab);
-  })
 }
 
 
