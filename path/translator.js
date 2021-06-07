@@ -19,8 +19,9 @@ const findTabByUrlTranslator = () => {
 
 const removeEventCallBackTranslator = (tabId) => {
   const deletedIndex = tabs.findIndex(c => c.id === tabId);
-
-  tabs.splice(deletedIndex, 1);
+  if(deletedIndex !== -1) {
+    tabs.splice(deletedIndex, 1);
+  }
 }
 
 const createEventCallbackTranslator = (tab) => {

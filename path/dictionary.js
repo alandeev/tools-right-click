@@ -14,8 +14,9 @@ const findTabByUrlDictionary = () => {
 
 const removeEventCallBackDictionary = (tabId) => {
   const deletedIndex = tabsDictionary.findIndex(c => c.id === tabId);
-
-  tabsDictionary.splice(deletedIndex, 1);
+  if(deletedIndex !== -1) {
+    tabsDictionary.splice(deletedIndex, 1);
+  }
 }
 
 const createEventCallbackDictionary = (tab) => {
